@@ -2,7 +2,7 @@
 
 class ListingBasic
 {
-    private $id, $title, $website, $email, $twitter;
+    private $id, $title, $website, $email, $twitter, $image;
     protected $status = 'basic';
 
     /**
@@ -25,6 +25,7 @@ class ListingBasic
         if (!isset($data['id'])) {
             throw new Exception('Unable to create a listing, invalid id');
         }
+        
         $this->setId($data['id']);
         if (!isset($data['title'])) {
             throw new Exception('Unable to create a listing, invalid title');
@@ -175,4 +176,32 @@ class ListingBasic
     {
         return get_object_vars($this);
     }
+
+     /**
+     * Gets the local property $image
+     */
+    public function getImage()
+    {
+        if(empty($this->image))
+        {
+        return false;
+        }
+        return $this->image;
+    }
+
+     /**
+     * Cleans up and sets the local property $image
+     */
+    public function setImage($value)
+    {
+        if(empty($value)){
+            return $value = false;
+        }else if(substr($value, 0, 5) == 'https'){
+            return $this->image = $value;
+        }else{
+            return $this->image = BASE_URL. '/' . $value;
+        }      
+    }
 }
+
+

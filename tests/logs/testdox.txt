@@ -1,0 +1,21 @@
+Listing Basic
+ [x] Listing basic must have valid data
+ [x] Listing basic must have valid data id
+ [x] Listing basic must have valid data title
+ [x] Listing basic creates object when passing id and title
+ [x] Listing basicget status returns basic
+ [x] Listing basic return expected results
+
+Listing Featured
+ [x] Listing featured get status returns featured
+ [x] Listing featured ge coc results
+
+Listing Image
+ [x] No image
+ [x] Full path image
+ [x] Build path image
+
+Listing Premium
+ [x] Listing premium returns premium
+ [x] Listing premium returns description
+
